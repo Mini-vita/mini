@@ -14,7 +14,7 @@ writer: Mini-vita
 $$var[f] = E[(f(x) - E[f(x)])^2]$$
 $$       = E[(f(x)^2 - 2f(x)E[f(x)] + E[f(x)]^2] $$
 $$       = E[f(x)^2] - 2E[f(x)]^2 + E[f(x)]^2 $$
-$$       = E[f(x)^2] - E[f(x)]^2
+$$       = E[f(x)^2] - E[f(x)]^2 $$
 
 $$\sum_{n=1}^N\{ y(x_n, w) - t_n \} ^2$$   (식 1.2)
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
