@@ -22,5 +22,5 @@ $$       = E[f(x)^2] - E[f(x)]^2 $$
 
 ## 1.6 ## 
 두 변수 x와 y가 서로 독립적일 때, x와 y의 공분산이 0임을 증명하라
-$$cov[x, y] = E_{x,y} [\lbracex - E[x]\lbrace \lbracey-E[y]\lbrace] $$
+$$cov[x, y] = E_{x,y} [\lbrace x - E[x]\rbrace \lbrace y-E[y]\rbrace] $$
 ss
