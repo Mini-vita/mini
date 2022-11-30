@@ -13,6 +13,6 @@ writer: Mini-vita
 식1.2에서 오륫값을 최소화하는 계수 w = $${w_i}$$를 구할 수 있음을 증명해야 한다.  
 그래서 선형 방정식
 
-$$E(w) =\frac{1}{2}\sum_{n=1}^N\left{ y(x_n, w) - t_n right\} ^2$$
+$$E(w) =\frac{1}{2}\sum_{n=1}^N\{ y(x_n, w) - t_n \} ^2$$
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
