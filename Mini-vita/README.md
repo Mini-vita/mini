@@ -6,7 +6,7 @@ mathjax: true
 writer: Mini-vita
 ---
 
-
+\{ \}
 
 ## 1.1 **
 
