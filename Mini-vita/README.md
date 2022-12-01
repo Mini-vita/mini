@@ -8,13 +8,16 @@ writer: Mini-vita
 ## 1.1*
 ## 1.10 *
 통계적으로 독립적인 두 변수 x와 z에 대해 두 변수 합의 평균과 분산이 다음을 만족함을 증명하라 
-E[x + z] = E[x] + E[z]
-VAR[x + z] = VAR[x] + VAR[z]
 
-식 1.34를 같이 보면,  
-$$ \int $$
-$$ $$
-$$ $$
+$$ E[x + z] = E[x] + E[z] $$
+$$ VAR[x + z] = VAR[x] + VAR[z] $$
+
+식 1.34를 같이 보면,
+$$ E[f(x)] = \int p(x)f(x)dx $$
+그래서,
+$$ E[x + z] = \int\int p(x,z)(x+z)dxdy $$
+근데 x,z가 독립적인 경우에 p(x, z) = p(x)p(z)
+$$ E[x + z] = \int\int p(x)p(z)(x+z)dxdy $$
 
 
 ## 1.5* 
