@@ -5,7 +5,7 @@ categories: Machine Learning
 mathjax: true
 writer: Mini-vita
 ---
-
+## 1.1*
 
 ## 1.5* 
 식 1.38의 정의를 이용해서 var[f(x)]가 식 1.39를 만족함을 증명하라
