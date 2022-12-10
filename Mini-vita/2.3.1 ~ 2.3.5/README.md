@@ -33,7 +33,7 @@ $$\Sigma = \begin{pmatrix}
 여기서 짚고 갈 점은 공분산 행렬이 대칭행렬이라는 것이다.($\Sigma^T = \Sigma$)
 
 그렇다면, 공분산 행렬의 역행렬인 정밀도 행렬 역시 대칭행렬이 된다. (참고로 연습문제 2.2가 이걸 증명함)
-$$\Lambda = \Sigma^-1$$
+$$\Lambda = \Sigma^{-1}$$
 $$\Lambda = \begin{pmatrix} 
             \Lambda_{aa} & \Lambda_{ab} \\
             \Lambda_{ba} & \Lambda_{bb} 
@@ -48,8 +48,26 @@ $$\Lambda = \begin{pmatrix}
    이건 partial correlation(x와 y는 높은 상관, y와 z는 높은 상관 --> x와 z가 y를 통해서 연결되어 있다면 y를 통제했을 때 x와 z의 상관은 0)의 idea와 매우 관련있음
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-자 그럼 본격적으로 증명해보자! \\
-ㅇㅇㅇ
+자 그럼 본격적으로 증명해보자! \n
+우선 x가 가우시안 분포라는 가정에서부터 시작해야 하며 가우시안 분포의 지수상의 이차식 형태 2.44를 참고하자. \n
+또한, $x = \begin{pmatrix}
+            x_a & x_b
+           \end{pmatrix}^T $
+           
+$$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) = 
+                                   \frac{-1}{2}\begin{pmatrix}
+                                                   x_a - \mu_a & x_b - \mu_b
+                                                \end{pmatrix}
+                                                \begin{pmatrix} 
+                                                \Lambda_{aa} & \Lambda_{ab} \\
+                                                \Lambda_{ba} & \Lambda_{bb} 
+                                                \end{pmatrix} 
+                                                \begin{pmatrix}
+                                                   x_a - \mu_a \\
+                                                   x_b - \mu_b
+                                                \end{pmatrix}
+                                    =
+
 
 
 
