@@ -68,7 +68,7 @@ $$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) =
                                                    x_b - \mu_b
                                                 \end{pmatrix} $$
                                                 
-$$ = -\frac{1}{2}[(x_a - \mu_a)^T \Lambda_{aa} (x_a - \mu_a) + 2(x_a - \mu_a)^T \Lambda_{ab} (x_b - \mu_b) + (x_b - \mu_b)^T \Lambda_{bb} (x_b - \mu_a )] 
+$$ = -\frac{1}{2}[(x_a - \mu_a)^T \Lambda_{aa} (x_a - \mu_a) + 2(x_a - \mu_a)^T \Lambda_{ab} (x_b - \mu_b) + (x_b - \mu_b)^T \Lambda_{bb} (x_b - \mu_a )] $$
 
 
 
