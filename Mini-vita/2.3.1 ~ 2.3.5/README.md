@@ -7,7 +7,7 @@ $$x = \begin{pmatrix}
 ## 2.3.1 조건부 가우시안 분포
 
 만약 두 변수 집합이 결합적으로 가우시안 분포를 보인다면 \
-하나의 변수 집합에 대한 다른 변수 집합의 조건부 분포 역시 가우시안 분포를 보인다는 성질을 증명하는 단원
+하나의 변수 집합에 대한 다른 변수 집합의 조건부 분포 $p(x_a | x_b)$ 역시 가우시안 분포를 보인다는 성질을 증명하는 단원
 
 우선 D차원의 벡터 x가 가우시안 분포라고 가정할 때, $x_a$와 $x_b$로 나누어 보자. 
  
@@ -50,25 +50,25 @@ $$\Lambda = \begin{pmatrix}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 자 그럼 본격적으로 증명해보자! \
-우선 x가 가우시안 분포라는 가정에서부터 시작해야 하며 가우시안 분포의 지수상의 이차식 형태 2.44를 참고하자. \n
+우선 x가 가우시안 분포라는 가정에서부터 시작해야 하며 가우시안 분포의 지수상의 이차식 형태 2.44를 참고하자.
 또한, $x = \begin{pmatrix}
             x_a & x_b
            \end{pmatrix}^T $
            
-$$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) = 
-                                   -\frac{1}{2} \begin{pmatrix}
-                                                   x_a - \mu_a & x_b - \mu_b
-                                                 \end{pmatrix}
-                                                 \begin{pmatrix} 
-                                                 \Lambda_{aa} & \Lambda_{ab}  \\
-                                                 \Lambda_{ba} & \Lambda_{bb} 
-                                                 \end{pmatrix} 
-                                                 \begin{pmatrix}
-                                                   x_a - \mu_a  \\
-                                                   x_b - \mu_b
-                                                \end{pmatrix} $$
+$$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) = $$
+$$-\frac{1}{2} \begin{pmatrix}
+                x_a - \mu_a & x_b - \mu_b
+                \end{pmatrix}
+                \begin{pmatrix} 
+                \Lambda_{aa} & \Lambda_{ab}  \\
+                \Lambda_{ba} & \Lambda_{bb} 
+                \end{pmatrix} 
+                \begin{pmatrix}
+                 x_a - \mu_a  \\
+                 x_b - \mu_b
+                \end{pmatrix} $$
                                                 
-$$ = -\frac{1}{2}[(x_a - \mu_a)^T \Lambda_{aa} (x_a - \mu_a) + 2(x_a - \mu_a)^T \Lambda_{ab} (x_b - \mu_b) + (x_b - \mu_b)^T \Lambda_{bb} (x_b - \mu_a )] $$
+$$= -\frac{1}{2}[(x_a - \mu_a)^T \Lambda_{aa} (x_a - \mu_a) + 2(x_a - \mu_a)^T \Lambda_{ab} (x_b - \mu_b) + (x_b - \mu_b)^T \Lambda_{bb} (x_b - \mu_a )] $$
 
 
 
