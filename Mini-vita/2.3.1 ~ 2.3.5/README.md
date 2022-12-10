@@ -108,7 +108,7 @@ $$= -\frac{1}{2}\begin{pmatrix}
                 
 $X_b$가 고정된 관측값인 경우에 , 결합분포인 x에서의 이차항은 $-\frac{1}{2}x_a^T\Lambda_{aa}x_a$
 이걸 2.71과 같이 봤을 때, $\Sigma_{a|b}^{-1} = \Lambda{aa}$
-자, 즉, $p(x_a|x_b}$의 공분산을 구했다. 
+자, 즉, $p(x_a|x_b}$ 의 공분산을 구했다. 
 이번에는 위에 저걸 계산했을 때 x_a의 일차식에 해당하는 항만 뽑아보면, 
 $$x_a^T[\Lambda{aa}\mu_a - \Lambda{ab}(x_b - \mu_b)]$$
 이다. 
