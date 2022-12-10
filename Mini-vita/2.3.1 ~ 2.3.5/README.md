@@ -59,17 +59,15 @@ $$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) =
                                    -\frac{1}{2} \begin{pmatrix}
                                                    x_a - \mu_a & x_b - \mu_b
                                                  \end{pmatrix}
-                                                 
                                                  \begin{pmatrix} 
                                                  \Lambda_{aa} & \Lambda_{ab}  \\
                                                  \Lambda_{ba} & \Lambda_{bb} 
                                                  \end{pmatrix} 
-                                                 
                                                  \begin{pmatrix}
                                                    x_a - \mu_a  \\
                                                    x_b - \mu_b
                                                 \end{pmatrix} $$
-                                    =
+                                    
 
 
 
