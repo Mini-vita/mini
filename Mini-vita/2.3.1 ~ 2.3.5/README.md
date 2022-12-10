@@ -65,7 +65,7 @@ $$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) =
                                                 \begin{pmatrix}
                                                    x_a - \mu_a \\
                                                    x_b - \mu_b
-                                                \end{pmatrix}
+                                                \end{pmatrix} $$
                                     =
 
 
