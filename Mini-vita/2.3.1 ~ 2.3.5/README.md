@@ -34,6 +34,7 @@ $$\Sigma = \begin{pmatrix}
 
 그렇다면, 공분산 행렬의 역행렬인 정밀도 행렬 역시 대칭행렬이 된다. (참고로 연습문제 2.2가 이걸 증명함)
 $$\Lambda = \Sigma^{-1}$$
+
 $$\Lambda = \begin{pmatrix} 
             \Lambda_{aa} & \Lambda_{ab} \\
             \Lambda_{ba} & \Lambda_{bb} 
@@ -55,15 +56,17 @@ $$\Lambda = \begin{pmatrix}
            \end{pmatrix}^T $
            
 $$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) = 
-                                   \frac{-1}{2}\begin{pmatrix}
+                                   -\frac{1}{2} \begin{pmatrix}
                                                    x_a - \mu_a & x_b - \mu_b
-                                                \end{pmatrix}
-                                                \begin{pmatrix} 
-                                                \Lambda_{aa} & \Lambda_{ab} \\
-                                                \Lambda_{ba} & \Lambda_{bb} 
-                                                \end{pmatrix} 
-                                                \begin{pmatrix}
-                                                   x_a - \mu_a \\
+                                                 \end{pmatrix}
+                                                 
+                                                 \begin{pmatrix} 
+                                                 \Lambda_{aa} & \Lambda_{ab}  \\
+                                                 \Lambda_{ba} & \Lambda_{bb} 
+                                                 \end{pmatrix} 
+                                                 
+                                                 \begin{pmatrix}
+                                                   x_a - \mu_a  \\
                                                    x_b - \mu_b
                                                 \end{pmatrix} $$
                                     =
