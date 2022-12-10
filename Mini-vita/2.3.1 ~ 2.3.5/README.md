@@ -4,11 +4,11 @@
 
 우선 D차원의 벡터 x가 가우시안 분포라고 가정할 때, $x_a$와 $x_b$로 나누어 보자. 
 $$x = \left{
-      \begin{pmatrix} 
+      \begin{matrix} 
          a_{11} & a_{12} & a_{13}  \\
          a_{21} & a_{22} & a_{23}  \\
          a_{31} & a_{32} & a_{33}  \\
-       \end{pmatrix} 
+       \end{matrix} 
        \right}  $$
 
 
