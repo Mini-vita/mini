@@ -107,7 +107,7 @@ $$= -\frac{1}{2}\begin{pmatrix}
                 \end{pmatrix} + x^T\Sigma^{-1}\mu + C $$
                 
 $X_b$가 고정된 관측값인 경우에 , 결합분포인 x에서의 이차항은 $-\frac{1}{2}x_a^T\Lambda_{aa}x_a$ \
-이걸 2.71과 같이 봤을 때, $\Sigma_{a|b}^{-1} = \Lambda{aa}$ \
+이걸 2.71과 같이 봤을 때, $\Sigma_{a|b}^{-1} = \Lambda{aa}$  (식 2.73)  \
 자, 즉, 조건부 분포의 공분산을 구했다. 
 이번에는 위에 저걸 계산했을 때 x_a의 일차식에 해당하는 항만 뽑아보면, \
 $$x_a^T[\Lambda{aa}\mu_a - \Lambda{ab}(x_b - \mu_b)]$$
@@ -117,11 +117,32 @@ $$x_a^T[\Lambda{aa}\mu_a - \Lambda{ab}(x_b - \mu_b)]$$
 $$\Sigma_{a|b}^{-1}\mu_{a|b} = \Lambda{aa}\mu_a - \Lambda{ab}(x_b - \mu_b) $$
 즉, 
 $$\mu_{a|b} = \Sigma_{a|b}[\Lambda{aa}\mu_a - \Lambda{ab}(x_b - \mu_b)] $$
-$$= \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(x_b - \mu_b) $$
+$$= \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(x_b - \mu_b) (식 2.75) $$ 
 
 식 2.73과 2.75는 분할 정밀 행렬에 대한 식으로 표현되었다. \
 이는 분할 공분산 행렬의 식으로도 표현 가능하다. 이 때, 분할 행렬의 역행렬에 대한 성질을 활용해야 한다. \
 
+$$\begin{pmatrix}    
+    A  & B // 
+    C  & D 
+    \end{pmatrix} = \begin{pmatrix}
+                     M  & -MBD^{-1} // 
+                     -D^{-1}CM & D^{-1}CMBD^{-1} 
+                    \end{pmatrix}  (식 2.76) $$
+                    
+여기서 M은 다음과 같이 정의되었다. 
+$$M = (A-BD^{-1}C)^{-1}  (식 2.77)$$
+이걸 적용해서 생각해보면, 
+$$\begin{pmatrix} 
+  \Sigma_{aa} & \Sigma_{ab} \\
+  \Sigma_{ba} & \Sigma_{bb} 
+  \end{pmatrix}^{-1}  = \begin{pmatrix} 
+                           \Lambda_{aa} & \Lambda_{ab} \\
+                           \Lambda_{ba} & \Lambda_{bb} 
+                        \end{pmatrix} $$
+                        
+여기에 식 2.76을 적용하면 다음과 같다. 
+$$\Lambda_{aa} = (\Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba})^{-1} (식 2.79)$$
 
 
 
