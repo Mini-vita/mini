@@ -123,10 +123,10 @@ $$= \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(x_b - \mu_b) (식 2.75) $$
 이는 분할 공분산 행렬의 식으로도 표현 가능하다. 이 때, 분할 행렬의 역행렬에 대한 성질을 활용해야 한다. \
 
 $$\begin{pmatrix}    
-    A  & B // 
-    C  & D 
+    A & B  // 
+    C & D 
     \end{pmatrix} = \begin{pmatrix}
-                     M  & -MBD^{-1} // 
+                     M         & -MBD^{-1}    // 
                      -D^{-1}CM & D^{-1}CMBD^{-1} 
                     \end{pmatrix}  (식 2.76) $$
                     
