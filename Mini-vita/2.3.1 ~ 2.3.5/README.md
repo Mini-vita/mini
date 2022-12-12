@@ -175,13 +175,28 @@ $$= -\frac{1}{2}(x_a^T\Lambda_{aa}x_a - x_a^T\Lambda_{aa}\mu_a - \mu_a^T\Lambda_
 위에서 $x_b$에 대한 이차식과 일차식을 뽑아내보자
 (5번 = 8번, 7번 = 10번, 14번 = 15번, 그리고 13번이 이차식)
  $$= -\frac{1}{2}x_b^T\Lambda_{bb}x_b + x_b^T(\Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)) + 나머지 \\
- = -\frac{1}{2}x_b^T\Lambda_{bb}x_b + x_b^Tm + 나머지  (식 2.84) $$ 
+ = -\frac{1}{2}x_b^T\Lambda_{bb}x_b + x_b^Tm + 나머지  $$ 
  
- 즉, m이라 함은 
- 
- $$m = \Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)  ( 2.85) $$
+ 여기서 짚고 갈 점은 두 가지!
+ 우선, m을 정의할 수 있음
+$$m = \Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)  ( 2.85) $$
+또한, 제곱식을 완성할 수 있다. 
+$$-\frac{1}{2}x_b^T\Lambda_{bb}x_b + x_b^Tm =  -\frac{1}{2}(x_b - \Lambda_{bb}^{-1}m)^T\Lambda_{bb}(x_b - \Lambda_{bb}^{-1}m) + \frac{1}{2}m^T\Lambda_{bb}^{-1}m  (식 2.84) $$
+a의 주변 확률 분포는 b에 대한 항들을 적분하면 되지! $x_b$에 대해서 제곱식 완성한 식 2.84에 지수함수를 취해서 $x_b$를 적분 시켜서 없앨 수 있다. 그렇다면, 남게 되는 것은 식 2.84의 오른쪽 항과 식 2.70에서 $x_a$에만 종속적인 나머지 항들이다.  //
+식 2.84의 오른쪽 항에 위에서 정의한 m을 대입하고 식 2.70 나머지들을 합치면 다음과 같다! 
+
+$$\frac{1}{2}[\Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)]^T\Lambda_{bb}^{-1}[\Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)]  \\
+-\frac{1}{2}x_a^T\Lambda_{aa}x_a + x_a^T(\Lambda_{aa}\mu_a + \Lambda_{ab}\mu_b) + const  \\
+= -\frac{1}{2}x_a^T(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})x_a + x_a^T(\Lambda_{aa} - \Lambda_{ab}\Lambda_{bb}^{-1}\Lambda_{ba})\mu_a + const   (식 2.87) $$
+
+자! $x_b$를 적분하여 $x_b$를 제거한 $x_a$의 주변 확률을 봤더니, $x_a$의 이차항을 보니 가우시안 분포를 보인다! 
+결국 주변 분포 역시 가우시안 분포임을 증명했다. 
+
+가우시안 분포의 평균과 분산을 구하는 과정은 위 단원과 비슷하므로 생략한다. 
+
+참고로, 조건부 분포에 대해서는 분할 정밀 행렬을 사용했을 때 평균과 공분산이 단순하게 표현되었던 반면에 주변 분포의 경우에는 \
+분할 공분산 행렬을 사용할 때, 평균과 공분산이 가장 단순하게 표현된다. 
 
 
-자 여기서, 윗단원에서 구했던 2.71을 다시 생각해보자! 
+## 2.3.3 가우시안 변수에 대한 
 
-----
