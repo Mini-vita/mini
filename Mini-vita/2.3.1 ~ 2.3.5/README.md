@@ -163,7 +163,7 @@ $$\Sigma_{a|b} = \Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}  (식 2.82
 $$p(x_a) = \int p(x_a, x_b)dx_b  (식 2.83) $$
 윗 단원에서처럼 지수상의 이차식(식 2.70)에 초점을 맞춰서 주변 분포의 평균과 공분산을 구하는 전략을 사용하자. 
 
-$$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) = $$
+$$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) $$
 $$= -\frac{1}{2}(x_a-\mu_a)^T\Lambda_{aa}(x_a - \mu_a)  -\frac{1}{2}(x_a-\mu_a)^T\Lambda_{ab}(x_b - \mu_b)
     -\frac{1}{2}(x_b-\mu_b)^T\Lambda_{ba}(x_a - \mu_a)  -\frac{1}{2}(x_b-\mu_b)^T\Lambda_{bb}(x_b - \mu_b) (식 2.70) $$
     
@@ -171,3 +171,17 @@ $$= -\frac{1}{2}(x_a^T\Lambda_{aa}x_a - x_a^T\Lambda_{aa}\mu_a - \mu_a^T\Lambda_
  -\frac{1}{2}(x_a^T\Lambda_{ab}x_b - x_a^T\Lambda_{ab}\mu_b - \mu_a^T\Lambda_{ab}x_b + \mu_a^T\Lambda_{ab}\mu_b) \\
  -\frac{1}{2}(x_b^T\Lambda_{ba}x_a - x_b^T\Lambda_{ba}\mu_a - \mu_b^T\Lambda_{ba}x_a + \mu_b^T\Lambda_{ba}\mu_a) \\
  -\frac{1}{2}(x_b^T\Lambda_{bb}x_b - x_b^T\Lambda_{bb}\mu_b - \mu_b^T\Lambda_{bb}x_b + \mu_b^T\Lambda_{bb}\mu_b) \\ $$
+
+위에서 $x_b$에 대한 이차식과 일차식을 뽑아내보자
+(5번 = 8번, 7번 = 10번, 14번 = 15번, 그리고 13번이 이차식)
+ $$= -\frac{1}{2}x_b^T\Lambda_{bb}x_b + x_b^T(\Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)) + 나머지 \\
+ = -\frac{1}{2}x_b^T\Lambda_{bb}x_b + x_b^Tm + 나머지  (식 2.84) $$ 
+ 
+ 즉, m이라 함은 
+ 
+ $$m = \Lambda_{bb}\mu_b - \Lambda_{ba}(x_a - \mu_a)  ( 2.85) $$
+
+
+자 여기서, 윗단원에서 구했던 2.71을 다시 생각해보자! 
+
+----
