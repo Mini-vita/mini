@@ -167,4 +167,7 @@ $$\frac{-1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu) = $$
 $$= -\frac{1}{2}(x_a-\mu_a)^T\Lambda_{aa}(x_a - \mu_a)  -\frac{1}{2}(x_a-\mu_a)^T\Lambda_{ab}(x_b - \mu_b)
     -\frac{1}{2}(x_b-\mu_b)^T\Lambda_{ba}(x_a - \mu_a)  -\frac{1}{2}(x_b-\mu_b)^T\Lambda_{bb}(x_b - \mu_b) (식 2.70) $$
     
-$$= -\frac{1}{2}(x_a^T\Lambda_{aa}x_a - x_a^T\Lambda_{aa}\mu_a - \mu_a^T\Lambda_{aa}x_a + \mu_a^T\Lambda_{aa}\mu_a)
+$$= -\frac{1}{2}(x_a^T\Lambda_{aa}x_a - x_a^T\Lambda_{aa}\mu_a - \mu_a^T\Lambda_{aa}x_a + \mu_a^T\Lambda_{aa}\mu_a) \\
+ -\frac{1}{2}(x_a^T\Lambda_{ab}x_b - x_a^T\Lambda_{ab}\mu_b - \mu_a^T\Lambda_{ab}x_b + \mu_a^T\Lambda_{ab}\mu_b) \\
+ -\frac{1}{2}(x_b^T\Lambda_{ba}x_a - x_b^T\Lambda_{ba}\mu_a - \mu_b^T\Lambda_{ba}x_a + \mu_b^T\Lambda_{ba}\mu_a) \\
+ -\frac{1}{2}(x_b^T\Lambda_{bb}x_b - x_b^T\Lambda_{bb}\mu_b - \mu_b^T\Lambda_{bb}x_b + \mu_b^T\Lambda_{bb}\mu_b) \\ $$
