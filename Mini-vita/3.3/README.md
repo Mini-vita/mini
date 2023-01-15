@@ -36,16 +36,29 @@ Multivariate normal distribution을 다시 확인해보면,
 $$exp(-\frac{1}{2} (x - \mu) ^T\Sigma^{-1}(x-\mu)$$
 exponential 안을 보면 $\mu$와 $\Sigma$를 뽑아낼 수 있음 
 저걸 풀어내면 $-\frac{1}{2}x^T\Sigma^{-1}x + x^T\Sigma^{-1}\mu + const$이다. 
-첫번째를 보면, 공분산을 뽑아낼 수 있고 알아낸 공분산을 활용하면 두 번째 항에서 평균을 뽑아낼 수 있다. 
+첫번째에 있는 이차항을 보면, 공분산을 뽑아낼 수 있고 알아낸 공분산을 활용하면 두 번째 차일차항에서 평균을 뽑아낼 수 있다. 
 --------------------------------------------------------------------------
 
 자 다시 돌아가서, 위에 우리가 알아낸 가능도(이것 역시 multivariate normal distribution)와 사전 함수를 넣어 버리면
-$$\propto exp(-\frac{1}{2}(t - \Upphi w)(\beta^{-1}I)^{-1}(t - \Upphi w))exp(-\frac{1}{2}(W-m_0)^T S^{-1}_0 (W-m_0))$$
-$$=exp
+$$\propto exp(-\frac{1}{2}(t - \phi w)(\beta^{-1}I)^{-1}(t - \phi w))exp(-\frac{1}{2}(W-m_0)^T S^{-1}_0 (W-m_0))$$
+참고로, $(\beta^{-1}I)^{-1} = \beta I$이므로 I만 남기고 $\beta$는 앞으로 보내버림 그리고 이차항만 뽑아내보면,
+$$=exp(-\frac{\beta}{2}(w^T\phi^T\phi W + W^tS^{-1}W)$$
+이며, 지수족 안에는 $-\frac{1}{2}W^T(\beta\phi^T \phi + S^{-1}_0)W$로 정리됨
+따라서, $S^{-1}_N = \beta\phi^T \phi + S^{-1}_0$ 이고 이는 사후분포의 공분산이다. 이는 식 3.51이다. 이제 알아낸 공분산 행렬을 넣어서 평균 벡터를 구할 수 있다. 아까 위에서 이번엔 일차항만 뽑아내보자. 
 
+$W^T(\beta\phi^T t + S^{-1}_0 m_0)$이고 그러므로, $S^{-1}_N m_N = \beta\phi^T t + S^{-1}_0 m_0$이다. \
+따라서, 사후분포의 평균 $m_N = S_N(\beta\phi^T t + S^{-1}_0 m_0)$이다. 이는 식 3.50으로 확인된다. \
+결론적으로, 베이지안 방법론을 바탕으로 선형회귀를 시행하여 훈련 데이터만 가지고 매개변수의 분포의 평균과 공분산을 알아냈다. 이렇게 알아낸 것들을 통해서 몇 가지 흥미로운 시사점을 뽑아낼 수 있다. 
 
+대부분 우리가 어떤 데이터를 관찰하기 전에는 어떠한 정보도 없으므로 사전 분포의 $m_0 = 0$이다.  그리고 $S_0 = \alpha^{-1}I$로 가정한다. $\alpha$는 precision임
+$P(w|D) = N(w|m_N, S_N)$이므로, $S_N = (\beta\phi^T \phi + \alpha I)^{-1}$이며, $m_N = S_N(\beta\phi^T t) = (\beta\phi^T \phi + \alpha I)^{-1}(\beta\phi^T t)$이다. 
 
+1) 만약에 $\alpha$가 0이라면? 즉, precision이 0이라면? covariance가 무한이겠지. 그렇다면 final result는 $S_N = \beta\phi^T \phi$가 되고, $m_N = (\phi^T \phi)^{-1}(\phi^T t)$가 된다. 즉, $m_N = (\phi^T\phi)^{-1}(\phi^T t)$가 되며 이는 least square solution이 된다.  $= w_{LS}$
+즉, 우리가 아무런 정보가 없을 때 least square solution이 된다. 
 
+2) $w_{reg} = m_N$이다. 
+
+![image](https://user-images.githubusercontent.com/71582504/212532785-1bbced46-1e1e-4c55-89a0-f9a9f3e0fa5e.png)
 
 
 
