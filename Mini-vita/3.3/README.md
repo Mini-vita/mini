@@ -1,10 +1,10 @@
 ## 3.3 베이지안 선형 회귀
 
-$$t = y(x, w) + \epsilon (식 3.7)$$
-타깃 변수 t는 결정 함수 y(x, w)와 가우시안 노이즈의 합으로 주어진다. /
-또한, 가우시안 노이즈는 $\epsilon ~ N(0, \upbeta^{-1})$    /
-w는 random variable 좀 더 정확하게 말하면 random vector임   /
-그러므로 w는 그 자체의 분포를 가지게 됨  /
+$$t = y(x, w) + \epsilon (식 3.7)$$ 
+타깃 변수 t는 결정 함수 y(x, w)와 가우시안 노이즈의 합으로 주어진다. \
+또한, 가우시안 노이즈는 $$\epsilon ~ N(0, \upbeta^{-1})$$    \
+w는 random variable 좀 더 정확하게 말하면 random vector임   \
+그러므로 w는 그 자체의 분포를 가지게 됨  \
 
 prior distribution : p(w) = N(m_0, S_0) 즉, 평균 벡터와 공분산 행  /
 지금까지는 우린 아무런 데이터 즉 아무런 정보가 없으므로 $m_0$으로 정의한다. / 
