@@ -16,15 +16,14 @@ $$t2 = \phi^T(x_2)w + \epsilon_2$$
 $$t_N = \phi^T(x_N)w + \epsilon_N$$
 
 이를 행렬 form으로 바꾸면!
-$$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
-$$\begin{pmatrix}t_1 \\\ \dotsb \\\ t_N\end{pmatrix} = \begin{pmatrix}\phi^T(x_1) \\\ \dotsb \\\ \phi^T(x_N)\end{pmatrix}w + \begin{pmatirx}\epsilon_1 \\\ \dotsb \\\ \epsilon_N\end{pmatrix}$$
+$$\begin{pmatrix}t_1 \\\ \dotsb \\\ t_N\end{pmatrix} = \begin{pmatrix}\phi^T(x_1) \\\ \dotsb \\\ \phi^T(x_N)\end{pmatrix}w + \begin{pmatrix}\epsilon_1 \\\ \dotsb \\\ \epsilon_N\end{pmatrix}$$
 
 즉 이는 벡터로 봤을 때
-$$t = \Upphi w + \epsilon$$
+$$t = \phi w + \epsilon$$
 여기서 noise 벡터인 $\epsilon$은 $N(0, \beta^{-1}I)$의 형태이다. 이는 train data는 independent and identically distributed이며 해당 data의 noise 역시 독립적이므로 diagonal임 (식 3.52)
 그런데 여기서 w의 사전 분포는 가우시안임 
 아래의 likelihood를 정의해보자. D는 이미 주어진 training data이며 결국 w에 대한 함수임
-$$p(D|w) = N(t|\Upphi w, \beta^{-1}I)$$
+$$p(D|w) = N(t|\phi w, \beta^{-1}I)$$
 
 자 이제 그럼 posterior distribution을 보자. 
 베이지안에 따르면, $p(w|D) = p(w, D) / P(D)$인데 P(D)는 이미 주어져 있으므로 이는 $\propto P(w, D) = P(D|W)P(W)$   \
