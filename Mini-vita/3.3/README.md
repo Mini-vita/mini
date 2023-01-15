@@ -3,7 +3,9 @@
 $$t = y(x, w) + \epsilon (식 3.7)$$ 
 $$t = w^T\phi(x) + \epsilon$$
 타깃 변수 t는 결정 함수 y(x, w)와 가우시안 노이즈의 합으로 주어진다. \
-또한, 가우시안 노이즈는 $$\epsilon \sim N(0, \beta^{-1})$$    \
+또한, 가우시안 노이즈는 $$\epsilon \sim N(0, \beta^{-1})$$    
+
+## 3.3.1 
 w는 random variable 좀 더 정확하게 말하면 random vector이다. 그러므로 w는 그 자체의 분포를 가지게 된다.
 
 prior distribution : p(w) = N(m_0, S_0) 즉, 평균 벡터와 공분산 행  \
@@ -33,14 +35,16 @@ $$p(D|w) = N(t|\phi w, \beta^{-1}I)$$
 Multivariate normal distribution을 다시 확인해보면, 
 
 ![image](https://user-images.githubusercontent.com/71582504/212530440-9f6710c3-552e-4ad5-9c0e-a6dee076d284.png)
+-------------------------------------------------------------------------
+
 $$exp(-\frac{1}{2} (x - \mu) ^T\Sigma^{-1}(x-\mu)$$
 exponential 안을 보면 $\mu$와 $\Sigma$를 뽑아낼 수 있음 
 저걸 풀어내면 $-\frac{1}{2}x^T\Sigma^{-1}x + x^T\Sigma^{-1}\mu + const$이다. 
 첫번째에 있는 이차항을 보면, 공분산을 뽑아낼 수 있고 알아낸 공분산을 활용하면 두 번째 차일차항에서 평균을 뽑아낼 수 있다. 
---------------------------------------------------------------------------
+
 
 자 다시 돌아가서, 위에 우리가 알아낸 가능도(이것 역시 multivariate normal distribution)와 사전 함수를 넣어 버리면
-$$\propto exp(-\frac{1}{2}(t - \phi w)(\beta^{-1}I)^{-1}(t - \phi w))exp(-\frac{1}{2}(W-m_0)^T S^{-1}_0 (W-m_0))$$
+$$\propto exp(-\frac{1}{2}(t - \phi w)^T(\beta^{-1}I)^{-1}(t - \phi w))exp(-\frac{1}{2}(W-m_0)^T S^{-1}_0 (W-m_0))$$
 참고로, $(\beta^{-1}I)^{-1} = \beta I$이므로 I만 남기고 $\beta$는 앞으로 보내버림 그리고 이차항만 뽑아내보면,
 $$=exp(-\frac{\beta}{2}(w^T\phi^T\phi W + W^tS^{-1}W)$$
 이며, 지수족 안에는 $-\frac{1}{2}W^T(\beta\phi^T \phi + S^{-1}_0)W$로 정리됨
@@ -57,7 +61,12 @@ $P(w|D) = N(w|m_N, S_N)$이므로, $S_N = (\beta\phi^T \phi + \alpha I)^{-1}$이
 즉, 우리가 아무런 정보가 없을 때 least square solution이 된다. 
 
 2) $w_{reg} = m_N$이다. 
+$P(W|D_ = N(w|m_N, S_N)$이고, 해당 사후 분포의 평균$m_N = S_N(\beta\phi^T t + S^{-1}_0 m_0)$ 이고, 사후 분포의 공분산 $S^{-1}_N = \beta\phi^T \phi + S^{-1}_0$ 이다. 
 
+-------------------------------------------------------------------------------------
+Regularized Least Square Porb
+$$t = \phi w$$
+$$PI 
 ![image](https://user-images.githubusercontent.com/71582504/212532785-1bbced46-1e1e-4c55-89a0-f9a9f3e0fa5e.png)
 
 
