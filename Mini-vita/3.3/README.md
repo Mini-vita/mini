@@ -1,6 +1,7 @@
 ## 3.3 베이지안 선형 회귀
 
 $$t = y(x, w) + \epsilon (식 3.7)$$ 
+$$t = w^T\phi(x) + \epsilon$$
 타깃 변수 t는 결정 함수 y(x, w)와 가우시안 노이즈의 합으로 주어진다. \
 또한, 가우시안 노이즈는 $$\epsilon \sim N(0, \beta^{-1})$$    \
 w는 random variable 좀 더 정확하게 말하면 random vector이다. 그러므로 w는 그 자체의 분포를 가지게 된다.
@@ -8,6 +9,14 @@ w는 random variable 좀 더 정확하게 말하면 random vector이다. 그러�
 prior distribution : p(w) = N(m_0, S_0) 즉, 평균 벡터와 공분산 행  \
 지금까지는 우린 아무런 데이터 즉 아무런 정보가 없으므로 $m_0$으로 정의한다. \
 
+train data: $D = {(x_n, t_n)}^N_{n=1}$
+
+$$t1 = w^T\phi_1(x_1) + \epsion_1 = \phi^T(x_1)w + \epsilon_1$$
+$$t2 = \phi^T(x_2)w + \epsilon_2$$
+$$t_N = \phi^T(x_N)w + \epsilon_N$$
+
+이를 행렬 form으로 바꾸면!
+$$\matrix{t_1 \dotsb \cr t_N}$$
 베이지안 방법론을 통해 과적합 문제를 피할 수 있으며, 훈련 데이터만 가지고 모델의 복잡도를 결정할 수 있다. 
 아래의 챕터들에서는 논의를 쉽게 하기 위해 단일 타깃 변수 t의 경우에 대해서만 살펴볼 것이다. 
 
