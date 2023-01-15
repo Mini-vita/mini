@@ -1,5 +1,13 @@
 ## 3.3 베이지안 선형 회귀
-![image](https://user-images.githubusercontent.com/71582504/211182349-ac5733b9-f330-4f34-bf5e-481f47325463.png)
+
+$$t = y(x, w) + \epsilon (식 3.7)$$
+타깃 변수 t는 결정 함수 y(x, w)와 가우시안 노이즈의 합으로 주어진다. /
+또한, 가우시안 노이즈는 $\epsilon ~ N(0, \upbeta^{-1})$    /
+w는 random variable 좀 더 정확하게 말하면 random vector임   /
+그러므로 w는 그 자체의 분포를 가지게 됨  /
+
+prior distribution : p(w) = N(m_0, S_0) 즉, 평균 벡터와 공분산 행  /
+지금까지는 우린 아무런 데이터 즉 아무런 정보가 없으므로 $m_0$으로 정의한다. / 
 
 베이지안 방법론을 통해 과적합 문제를 피할 수 있으며, 훈련 데이터만 가지고 모델의 복잡도를 결정할 수 있다. 
 아래의 챕터들에서는 논의를 쉽게 하기 위해 단일 타깃 변수 t의 경우에 대해서만 살펴볼 것이다. 
@@ -19,3 +27,6 @@ $$p(w|t) = N(w|m_N, S_N)  (식 3.49)$$
 $$p(t|x, X, t) = \int p(t|x, W) p(W|X, t)dw 
 사전 분포가 가우시안 분포이므로 최빈값과 평균값이 같다. 
 따라서, 최대 사후 가중 벡터는 단순히 w_MAP = m_N으로 주어지게 된다. 
+
+
+![image](https://user-images.githubusercontent.com/71582504/211182349-ac5733b9-f330-4f34-bf5e-481f47325463.png)
