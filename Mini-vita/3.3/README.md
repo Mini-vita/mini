@@ -2,7 +2,7 @@
 
 $$t = y(x, w) + \epsilon (식 3.7)$$ 
 타깃 변수 t는 결정 함수 y(x, w)와 가우시안 노이즈의 합으로 주어진다. \
-또한, 가우시안 노이즈는 $$\epsilon ~ N(0, \upbeta^{-1})$$    \
+또한, 가우시안 노이즈는 $$\epsilon ~ N(0, \beta^{-1})$$    \
 w는 random variable 좀 더 정확하게 말하면 random vector임   \
 그러므로 w는 그 자체의 분포를 가지게 됨  \
 
