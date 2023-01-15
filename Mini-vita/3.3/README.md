@@ -82,12 +82,27 @@ $p(t^* |D) =$ ???
 식 3.58을 보면,
 $$p(t^* |D) = N(t^* | m_N^T\phi(x^* ), \sigma^2_N(x))$$
 이고, 예측 분포의 분산은 다음과 같다고 한다. 
-$$\sigma^2_N(x) = \frac{1}{\beta| + \phi(x)^TS_N \phi(x)$$
+$$\sigma^2_N(x) = \frac{1}{\beta} + \phi(x)^TS_N \phi(x)$$
 $$model: t^* = w^T\phi(x^* ) + \epsilon$$
 을 보면, w도 가우시안이고 epsilon도 가우시안이므로 t도 가우시안 분포가 된다. 
 
-$$ E(t^* | D) = E(w^T \phi(x^* ) + \epsilon)$$
+$$ E(t^* | D) = E(w^T \phi(x^* ) + \epsilon) = E(w)^T \phi(x^* ) + E(\epsilon) = E(w)^T \phi(x^* ) = m^T_N\phi(x^* )$$
+이는 위 식 3.58에서의 평균이 나오는 과정이다. 
+
+이제는 variance를 구해보자. 
+참고로 아래에서 w와 epsilon은 independent 하므로 var에서 두 개로 나눌 수 있으며 (책에서는 노이즈를 처리하는 것과 W에 대한 분포를 처리하는 것은 독립적인 가우시안 분포들이므로 분산들을 합산할 수 있다고 기술되어 있다. )   \
+$Var(x) = E(x^2) = E^2(x)$인 걸 계속 생각하자. 
+또한, E(w) = 0임을 가정해보자. 그러면 $Cov(w) = E((W-m_0)w^T)$에서 결국 $Cov(w) = E(ww^T)$라는 걸 알 수 있다. 
+$$Var(t^* | D) = Var(w^T \phi(x^* ) + \epsilon) = Var(w^T \phi(x^* )) + Var(\epsilon) = E((w^T \phi(x^* ))^2)+ \beta^{-1}$$
+$$E((w^T \phi(x^* ))^2) = \phi^T(x^* )E(ww^T)\phi(x^* ) = \phi^T(x^* ) Cov(w) \phi(x^* )$$
+$$Var(t^* | D) = \phi^T(x^* ) Cov(w) \phi(x^* )+ \beta^{-1}$$
+$$= \phi^T(x^* ) S_N \phi(x^* )+\beta^{-1}   (식 3.59)$$
 
 
+만약 추가적인 데이터 포인트들이 관측된다면, $\beta$에 의해 결정되는 데이터의 노이즈만을 포함하게 되고 사후 분포는 더 좁아질 것이다. 
+예측값의 불확실성은 x에 대해 종속적이며, 데이터 포인트들의 주변에서 그 불확실성이 가장 작다. 또한 불확실성의 정도는 관측된 데이터 포인트들의 수가 늘어남에 따라 감소하고 있다.
+![image](https://user-images.githubusercontent.com/71582504/212535548-4fa4b4e8-85c1-47c2-a7b4-bd603637a40f.png)
 
-
+서로 다른 x의 예측값들에 대한 공분산을 살펴보기 위해서는 w에 대한 사전분포로부터 샘플들을 추출한 후 그에 대한 함수들 y(x, w)를 그려보면 좋다. (그림 3.9)
+특정 영역에서 많은 데이터를 갖고 있지만 어떤 지역에서는 데이터가 없다면, 데이터가 있는 영역에서는 예측 confidence가 높지만, 없는 영역은 confidence가 낮다. 즉, error bar가 너무 커지고 해당 영역에서는 예측할 때 위험이 있다. 이는 가우시안 과정이라고 알려져 있는 또 다른 베이지안 방법을 활용함으로써 피할 수 있다고 한다. 이는 이후 6.4 절에 설명된다. 
+![image](https://user-images.githubusercontent.com/71582504/212535677-ecd945a1-0cfc-458c-8554-a7148951e0e7.png)
