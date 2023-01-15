@@ -67,12 +67,26 @@ $P(w|D) = N(w|m_N, S_N)$이므로, $S_N = (\beta\phi^T \phi + \alpha I)^{-1}$이
 
 ## 3.3.2 예측 분포
 실제로는 W를 알아내는 것보다는 새로운 X에 대하여 t의 값을 예측하는 것이 더 중요할 수 있다. 
-prior p(w} =  /
-train data D =  /
-posterior p(w|D) = /
+prior p(w} =  \
+train data D =  \
+posterior p(w|D) = \
 
-$x^*$는 test input이다. 
-$$p(t^* | x^*) = \int p(t^*, w|, D) = p(t^*|w)p(w|D)$$
+$x^* $는 test input이다. 
+$$p(t^* | x^* ) = \int p(t^* , w|, D)dw = p(t^* |w)p(w|D)$$
+$$model: t^* = w^T\phi(x^* ) + \epsilon$$
+즉, 지금 우리가 필요한 건 w, test input, epsilon이다. 
+$$\int p(t^* |w, x^* , \beta)p(w|D) dw$$
+여기서 오른쪽 사후분포는 가우시안 $N(w|m_N, S_N)$이고, 왼쪽도 저 model을 보면 모두 가우시안이다. 
+$p(t^* |D) =$ ???
+
+식 3.58을 보면,
+$$p(t^* |D) = N(t^* | m_N^T\phi(x^* ), \sigma^2_N(x))$$
+이고, 예측 분포의 분산은 다음과 같다고 한다. 
+$$\sigma^2_N(x) = \frac{1}{\beta| + \phi(x)^TS_N \phi(x)$$
+$$model: t^* = w^T\phi(x^* ) + \epsilon$$
+을 보면, w도 가우시안이고 epsilon도 가우시안이므로 t도 가우시안 분포가 된다. 
+
+$$ E(t^* | D) = E(w^T \phi(x^* ) + \epsilon)$$
 
 
 
