@@ -30,3 +30,4 @@ $$\gamma = \phi(x)^T S_N \phi(x) $$
 $$\frac{\gamma^2}{1+\gamma} >= 0$$
 이 된다. 
 
+
