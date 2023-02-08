@@ -10,12 +10,13 @@
 
 $$\sigma^2_{N+1} (x) <= \sigma^2_N(X)  (식 3.111)$$
 즉, 3.59를 보면, 
+$$\phi^2_N(X) = \frac{1}{\beta) + \phi(X)^TS_N \phi(X)  (식 3.59)$$
 $$\phi(x)^T S_{N+1} \phi(x)  <=  \phi(x)^T S_N \phi(x)$$
 
 Appendix C의 Woodbury 행렬 성질을 활용하자. 
 $$(M + vv^T)^{-1} = M^{-1} - \frac{(M^{-1}v)(v^TM^{-1})}{1+v^TM^{-1}v}$$
 참고로, M이 크기가 큰 대각행렬이라 역행렬을 구하기 쉽고 B는 많은 수의 행을 가지고 있지만 적은 수의 열을, C는 반대로 많은 수의 열과 적은 수의 행을 가지고 있어서 유용하게 사용할 수 있다. 
-이 식은 양변에 $(M + vv^T)를 곱함으로써 증명할 수가 있다. 
+이 식은 양변에 $(M + vv^T)$를 곱함으로써 증명할 수가 있다. 
 
 
 $$S_{N+1} = (S_N^{-1} + \beta \phi(x)\phi(x)^T)^{-1} = S_N - \frac{S_N \phi(x)\phi(x)^T S_N}{1 + \phi(x)^T S_N \phi(x)}$$
@@ -24,5 +25,8 @@ $$\phi(x)^T S_N \phi(x) - \phi(x)^T S_{N+1} \phi(x) >= 0 $$
 $$\phi(x)^T (S_N - S_{N+1}) \phi(x) >= 0 $$
 $$\phi(x)^T \frac{S_N \phi(x)\phi(x)^T S_N}{1 + \phi(x)^T S_N \phi(x)} \phi(x) >= 0 $$
 
-$$\gamma $$
+$$\gamma = \phi(x)^T S_N \phi(x) $$
+는 0보다 크거나 같기 때문에 (불확실도) 
+$$\frac{\gamma^2}{1+\gamma} >= 0$$
+이 된다. 
 
