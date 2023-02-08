@@ -28,7 +28,7 @@ $$\phi(x)^T \frac{S_N \phi(x)\phi(x)^T S_N}{1 + \phi(x)^T S_N \phi(x)} \phi(x) >
 $$\gamma = \phi(x)^T S_N \phi(x) $$
 는 0보다 크거나 같기 때문에 (불확실도) 
 
-$$\frac{ \gamma^2}{1+ \gamma} >= 0$$
+$$\gamma^2  \  1+ \gamma >= 0 $$
 이 된다. 
 
 
