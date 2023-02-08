@@ -10,7 +10,7 @@
 
 $$\sigma^2_{N+1} (x) <= \sigma^2_N(X)  (식 3.111)$$
 즉, 3.59를 보면, 
-$$\phi^2_N(X) = \frac{1}{\beta) + \phi(X)^TS_N \phi(X)  (식 3.59)$$
+$$\phi^2_N(X) = \frac{1}{\beta} + \phi(X)^TS_N \phi(X)  (식 3.59) $$
 $$\phi(x)^T S_{N+1} \phi(x)  <=  \phi(x)^T S_N \phi(x)$$
 
 Appendix C의 Woodbury 행렬 성질을 활용하자. 
@@ -27,7 +27,8 @@ $$\phi(x)^T \frac{S_N \phi(x)\phi(x)^T S_N}{1 + \phi(x)^T S_N \phi(x)} \phi(x) >
 
 $$\gamma = \phi(x)^T S_N \phi(x) $$
 는 0보다 크거나 같기 때문에 (불확실도) 
-$$\frac{\gamma^2}{1+\gamma} >= 0$$
+
+$$\frac{ \gamma^2}{1+ \gamma} >= 0$$
 이 된다. 
 
 
