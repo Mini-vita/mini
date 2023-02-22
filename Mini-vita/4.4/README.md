@@ -52,3 +52,10 @@ $$ f(z) ~ f(z_0)exp(-\frac{1}{2}(z-z_0)^T A(z-z_0))  (식 4.133) $$
 $$ N(x| \mu, \Sigma) = \frac{1}{(2 \pi)^{D/2}} \frac{1}{|\Sigma|^{1/2}} exp(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu)) (식 2.43) $$
 이걸 사용하면, 
 $$q(z) = \frac{|A|^{1/2}}{(2\pi)^{M/2}} exp(-\frac{1}{2}(z-z_0)^T A(z-z_0)) = N(z|z_0, A^{-1})$$
+
+여기서, 참고로 M X M 행렬 A는 헤시안 행렬이다. 
+헤시안 행렬이란? 
+임계점에서 헤시안 행렬의 고유값들이 
+![image](https://user-images.githubusercontent.com/71582504/220544544-0c78db37-1ea9-4819-a5c5-8bc01430c366.png)
+![image](https://user-images.githubusercontent.com/71582504/220544571-21c68fe5-194c-4da4-b24c-0cd2e12712f4.png)
+
