@@ -59,3 +59,4 @@ $$q(z) = \frac{|A|^{1/2}}{(2\pi)^{M/2}} exp(-\frac{1}{2}(z-z_0)^T A(z-z_0)) = N(
 ![image](https://user-images.githubusercontent.com/71582504/220544544-0c78db37-1ea9-4819-a5c5-8bc01430c366.png)
 ![image](https://user-images.githubusercontent.com/71582504/220544571-21c68fe5-194c-4da4-b24c-0cd2e12712f4.png)
 
+https://raw.githubusercontent.com/angeloyeo/gongdols/master/%EB%AF%B8%EC%A0%81%EB%B6%84%ED%95%99/%ED%97%A4%EC%8B%9C%EC%95%88%20%ED%96%89%EB%A0%AC%EC%9D%98%20%EC%9D%98%EB%AF%B8/fig4.gif
